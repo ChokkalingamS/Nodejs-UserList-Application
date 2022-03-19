@@ -84,7 +84,7 @@ router.route('/edituser/:id')
 
     const {OldEmail,NewEmail,ProfilePic,Mobile,JobType,DOB,PreferredLocation,FullName,country}=data;
 
-    if(!(OldEmail&&NewEmail&&ProfilePic&&Mobile&&JobType&&DOB&&PreferredLocation&&FullName&&country))
+    if(!(OldEmail&&NewEmail&&ProfilePic&&Mobile&&JobType&&DOB&&PreferredLocation.length&&FullName&&country))
     {
         return response.status(400).send({Message:'All Fields Required'})   
     }
@@ -95,8 +95,6 @@ router.route('/edituser/:id')
     {
         return response.status(400).send({Message:'Invalid Email'})
     }
-
-    
 
     if(OldEmail!==NewEmail)
     {
