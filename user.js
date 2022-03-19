@@ -2,7 +2,6 @@ import express from 'express'
 import { addUser, editUserById, getAllUsers, getUser, removeUserById } from './db.js'
 import {ObjectId} from 'mongodb';
 
-
 const router=express.Router()
 
 router.route('/getusers')
@@ -11,7 +10,7 @@ router.route('/getusers')
 
     if(!data.length)
     {
-        return response.status(404).send({Message:'UserList Empty'})
+        return response.status(404``).send({Message:'UserList Empty'})
     }
 
     return response.send(data)
@@ -38,8 +37,22 @@ router.route('/createuser')
 
     if(!data)
     {
-        return response.status(400).send({Message:'All Fields Required'})
+        return response.status(400).send({Message:'All Fields Required'})  
     }
+
+    const {Email,ProfilePic,Mobile,JobType,DOB,PreferredLocation,FullName,country}=data
+
+    if(!(Email&&ProfilePic&&Mobile&&JobType&&DOB&&PreferredLocation&&FullName&&country))
+    {
+        return response.status(400).send({Message:'All Fields Required'})   
+    }
+
+      const checkEmail =validateEmail(data.Email)
+
+      if(!checkEmail)
+      {
+        return response.status(400).send({Message:'Invalid Email'})
+      }
 
     const checkUser =await getUser({Email:data.Email})
 
@@ -51,7 +64,11 @@ router.route('/createuser')
     const create=await addUser(data);
 
     return response.send({Message:'User Added SuccessFully'})
+
 })
+
+
+
 
 router.route('/edituser/:id')
 .put(async (request,response)=>{
@@ -64,7 +81,22 @@ router.route('/edituser/:id')
         return response.status(400).send({Message:'All Fields Required'})        
     }
 
-    const {OldEmail,NewEmail,ProfilePic,Mobile,JobType,DOB,PreferredLocation,FullName}=data;
+
+    const {OldEmail,NewEmail,ProfilePic,Mobile,JobType,DOB,PreferredLocation,FullName,country}=data;
+
+    if(!(OldEmail&&NewEmail&&ProfilePic&&Mobile&&JobType&&DOB&&PreferredLocation&&FullName&&country))
+    {
+        return response.status(400).send({Message:'All Fields Required'})   
+    }
+
+    const checkNewEmail=validateEmail(NewEmail);
+
+    if(!checkNewEmail)
+    {
+        return response.status(400).send({Message:'Invalid Email'})
+    }
+
+    
 
     if(OldEmail!==NewEmail)
     {
@@ -123,5 +155,49 @@ router.route('/deleteuser/:id')
 
     return response.send({Message:'User Deleted'})
 })
+
+
+function validate(data,response)
+{
+    const {ProfilePic,Mobile,JobType,DOB,PreferredLocation,FullName}=data;
+
+   
+     if(ProfilePic==='')
+    {
+        return response.status(400).send({Message:'All Fields Required'}) 
+    }
+    else if(Mobile==='')
+    {
+        return response.status(400).send({Message:'All Fields Required'}) 
+    }
+    else if(JobType==='')
+    {
+        console.log(JobType);
+        return response.status(400).send({Message:'All Fields Required'}) 
+    }
+    else if(DOB==='')
+    {
+        return response.status(400).send({Message:'All Fields Required'}) 
+    }
+    else if(PreferredLocation==='')
+    {
+        return response.status(400).send({Message:'All Fields Required'}) 
+    }
+    else if(FullName==='')
+    {
+        return response.status(400).send({Message:'All Fields Required'}) 
+    }
+
+}
+
+
+const validateEmail = (email) => {
+    return String(email).toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
+
+
 
 export const userRouter=router;
