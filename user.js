@@ -10,7 +10,7 @@ router.route('/getusers')
 
     if(!data.length)
     {
-        return response.status(404``).send({Message:'UserList Empty'})
+        return response.status(404).send({Message:'UserList Empty'})
     }
 
     return response.send(data)
