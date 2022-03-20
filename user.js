@@ -154,48 +154,11 @@ router.route('/deleteuser/:id')
     return response.send({Message:'User Deleted'})
 })
 
-
-function validate(data,response)
-{
-    const {ProfilePic,Mobile,JobType,DOB,PreferredLocation,FullName}=data;
-
-   
-     if(ProfilePic==='')
-    {
-        return response.status(400).send({Message:'All Fields Required'}) 
-    }
-    else if(Mobile==='')
-    {
-        return response.status(400).send({Message:'All Fields Required'}) 
-    }
-    else if(JobType==='')
-    {
-        console.log(JobType);
-        return response.status(400).send({Message:'All Fields Required'}) 
-    }
-    else if(DOB==='')
-    {
-        return response.status(400).send({Message:'All Fields Required'}) 
-    }
-    else if(PreferredLocation==='')
-    {
-        return response.status(400).send({Message:'All Fields Required'}) 
-    }
-    else if(FullName==='')
-    {
-        return response.status(400).send({Message:'All Fields Required'}) 
-    }
-
-}
-
-
 const validateEmail = (email) => {
     return String(email).toLowerCase()
       .match(
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
   };
-
-
 
 export const userRouter=router;
