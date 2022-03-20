@@ -1,0 +1,476 @@
+{
+	"info": {
+		"_postman_id": "7f07dc2b-cf81-47fc-a6c1-1db2717bbbf8",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://user-appli-cation.herokuapp.com/api/getusers",
+					"protocol": "https",
+					"host": [
+						"user-appli-cation",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"getusers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://user-appli-cation.herokuapp.com/api/getusers",
+							"protocol": "https",
+							"host": [
+								"user-appli-cation",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"getusers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1881"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"759-u/hg960kRxSxpq+g7dTtp+9kRI0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 20 Mar 2022 11:23:07 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6236ee67afbf8a5de306bf9a\",\n        \"FullName\": \"Adam\",\n        \"Mobile\": \"987654321\",\n        \"country\": \"+91\",\n        \"JobType\": \"FT\",\n        \"PreferredLocation\": [\n            {\n                \"location\": \"Bangalore\",\n                \"checked\": true\n            }\n        ],\n        \"ProfilePic\": \"blob:https://userlist-application.netlify.app/7e855444-1a4d-4101-9722-afa32700ca93\",\n        \"Email\": \"adam@gmail.com\",\n        \"DOB\": \"2009-01-14\"\n    },\n    {\n        \"_id\": \"623700b1d4bcfe5607735faa\",\n        \"FullName\": \"Ragu\",\n        \"Mobile\": \"963852741\",\n        \"country\": \"+91\",\n        \"JobType\": \"PT\",\n        \"PreferredLocation\": [\n            {\n                \"location\": \"Bangalore\",\n                \"checked\": true\n            }\n        ],\n        \"ProfilePic\": \"blob:https://userlist-application.netlify.app/a2bb9505-05c2-4d9c-ab63-718e01d1cf84\",\n        \"Email\": \"ragu@gmail.com\",\n        \"DOB\": \"1996-07-17\"\n    },\n    {\n        \"_id\": \"62370c51eae8932948b4ccaa\",\n        \"FullName\": \"Franklin\",\n        \"Mobile\": \"7336955664\",\n        \"country\": \"+91\",\n        \"JobType\": \"Consultant\",\n        \"PreferredLocation\": [\n            {\n                \"location\": \"Chennai\",\n                \"checked\": true\n            }\n        ],\n        \"ProfilePic\": \"blob:https://userlist-application.netlify.app/9b2012ce-8d52-4d20-8d6d-d5402a1a0c65\",\n        \"Email\": \"frank@gmail.com\",\n        \"DOB\": \"1993-01-01\"\n    },\n    {\n        \"_id\": \"62370c94eae8932948b4ccab\",\n        \"FullName\": \"Manoharan\",\n        \"Mobile\": \"9698852321\",\n        \"country\": \"+91\",\n        \"JobType\": \"PT\",\n        \"PreferredLocation\": [\n            {\n                \"location\": \"Pune\",\n                \"checked\": true\n            }\n        ],\n        \"ProfilePic\": \"blob:https://userlist-application.netlify.app/e6cd5255-6a7e-407d-abde-0b6c02165fb2\",\n        \"Email\": \"manoharan@gmail.com\",\n        \"DOB\": \"2001-03-06\"\n    },\n    {\n        \"_id\": \"62370cd7eae8932948b4ccac\",\n        \"FullName\": \"Karthick\",\n        \"Mobile\": \"8776565877\",\n        \"country\": \"+91\",\n        \"JobType\": \"PT\",\n        \"PreferredLocation\": [\n            {\n                \"location\": \"Bangalore\",\n                \"checked\": true\n            }\n        ],\n        \"ProfilePic\": \"blob:https://userlist-application.netlify.app/efe1d5a3-6a71-406c-95be-23ce5001a77f\",\n        \"Email\": \"karthick@gmail.com\",\n        \"DOB\": \"1999-12-31\"\n    },\n    {\n        \"_id\": \"62370d1ceae8932948b4ccad\",\n        \"FullName\": \"Raja\",\n        \"Mobile\": \"7373630098\",\n        \"country\": \"+91\",\n        \"JobType\": \"FT\",\n        \"PreferredLocation\": [\n            {\n                \"location\": \"Chennai\",\n                \"checked\": true\n            }\n        ],\n        \"ProfilePic\": \"blob:https://userlist-application.netlify.app/82f1dad3-ac1f-4c10-b6b6-c680b344a2c7\",\n        \"Email\": \"raja@gmail.com\",\n        \"DOB\": \"2005-07-01\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://user-appli-cation.herokuapp.com/api/getuserbyid/6236ee67afbf8a5de306bf9a",
+					"protocol": "https",
+					"host": [
+						"user-appli-cation",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"getuserbyid",
+						"6236ee67afbf8a5de306bf9a"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get User By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://user-appli-cation.herokuapp.com/api/getuserbyid/6236ee67afbf8a5de306bf9a",
+							"protocol": "https",
+							"host": [
+								"user-appli-cation",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"getuserbyid",
+								"6236ee67afbf8a5de306bf9a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "308"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"134-Yo9htgis4EeuqqxajQxusfjTJs4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 20 Mar 2022 11:23:56 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6236ee67afbf8a5de306bf9a\",\n    \"FullName\": \"Adam\",\n    \"Mobile\": \"987654321\",\n    \"country\": \"+91\",\n    \"JobType\": \"FT\",\n    \"PreferredLocation\": [\n        {\n            \"location\": \"Bangalore\",\n            \"checked\": true\n        }\n    ],\n    \"ProfilePic\": \"blob:https://userlist-application.netlify.app/7e855444-1a4d-4101-9722-afa32700ca93\",\n    \"Email\": \"adam@gmail.com\",\n    \"DOB\": \"2009-01-14\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FullName\":\"Kumar\",\r\n    \"ProfilePic\":\"img\",\r\n    \"Email\":\"kumar@gmail.com\",\r\n    \"country\":\"+91\",\r\n    \"Mobile\":\"9865321474\",\r\n    \"JobType\":\"FT\",\r\n    \"DOB\":\"1996-25-18\",\r\n    \"PreferredLocation\":[{\"location\":\"Chennai\",\"checked\":true}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://user-appli-cation.herokuapp.com/api/createuser",
+					"protocol": "https",
+					"host": [
+						"user-appli-cation",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"createuser"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FullName\":\"Kumar\",\r\n    \"ProfilePic\":\"img\",\r\n    \"Email\":\"kumar@gmail.com\",\r\n    \"country\":\"+91\",\r\n    \"Mobile\":\"9865321474\",\r\n    \"JobType\":\"FT\",\r\n    \"DOB\":\"1996-25-18\",\r\n    \"PreferredLocation\":[{\"location\":\"Chennai\",\"checked\":true}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://user-appli-cation.herokuapp.com/api/createuser",
+							"protocol": "https",
+							"host": [
+								"user-appli-cation",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"createuser"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"25-QVPTPBy9zC9DHlXCFrzc3gZPIJI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 20 Mar 2022 11:27:24 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Message\": \"User Added SuccessFully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit User By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FullName\":\"Kumar\",\r\n    \"ProfilePic\":\"img\",\r\n    \"OldEmail\":\"kumar@gmail.com\",\r\n    \"NewEmail\":\"chokkalingam1707@gmail.com\",\r\n    \"Mobile\":\"9865321474\",\r\n    \"country\":\"+91\",\r\n    \"JobType\":\"FT\",\r\n    \"DOB\":\"1996-05-18\",\r\n    \"PreferredLocation\":\"Chennai\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://user-appli-cation.herokuapp.com/api/edituser/62370f9ceae8932948b4ccae",
+					"protocol": "https",
+					"host": [
+						"user-appli-cation",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"edituser",
+						"62370f9ceae8932948b4ccae"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Edit User By Id",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FullName\":\"Kumar\",\r\n    \"ProfilePic\":\"img\",\r\n    \"OldEmail\":\"kumar@gmail.com\",\r\n    \"NewEmail\":\"chokkalingam1707@gmail.com\",\r\n    \"Mobile\":\"9865321474\",\r\n    \"country\":\"+91\",\r\n    \"JobType\":\"FT\",\r\n    \"DOB\":\"1996-05-18\",\r\n    \"PreferredLocation\":\"Chennai\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://user-appli-cation.herokuapp.com/api/edituser/62370f9ceae8932948b4ccae",
+							"protocol": "https",
+							"host": [
+								"user-appli-cation",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"edituser",
+								"62370f9ceae8932948b4ccae"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"27-J3gUsRQi0gvCKnb/sPonHDEIU98\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 20 Mar 2022 11:30:49 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Message\": \"User Updated Successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete User By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://user-appli-cation.herokuapp.com/api/deleteuser/6236ee67afbf8a5de306bf9a",
+					"protocol": "https",
+					"host": [
+						"user-appli-cation",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"deleteuser",
+						"6236ee67afbf8a5de306bf9a"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete User By Id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://user-appli-cation.herokuapp.com/api/deleteuser/6236ee67afbf8a5de306bf9a",
+							"protocol": "https",
+							"host": [
+								"user-appli-cation",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"deleteuser",
+								"6236ee67afbf8a5de306bf9a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"1a-O+YQTh36OrFfDll9IZ5hwcXZj1c\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 20 Mar 2022 11:32:08 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Message\": \"User Deleted\"\n}"
+				}
+			]
+		}
+	]
+}
